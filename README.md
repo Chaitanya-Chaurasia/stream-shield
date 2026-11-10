@@ -53,3 +53,9 @@ node test2.js <match page url> --no-ext   # baseline
 This is a personal tool, tuned on a handful of sites. The overlay heuristic may occasionally hide
 something legitimate. If a player stops responding, unprotect the site or open an issue with the
 URL. Same-site pop-ups like login windows are also blocked on protected sites.
+
+## Contributing
+
+Issues and pull requests are welcome. The most useful contribution is a site where it fails:
+open an issue with the URL and what you clicked. Ad network domains for `rules.json` are also
+welcome. MIT licensed.
