@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Stream Shield</title>
+<style>
+  body { width: 300px; margin: 0; padding: 14px; font: 13px/1.4 system-ui, sans-serif; color: #222; background: #fff; }
+  h1 { font-size: 15px; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+  .site { font-weight: 600; word-break: break-all; }
+  button { width: 100%; padding: 9px; border: 0; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 8px; }
+  .on { background: #c0392b; color: #fff; } .off { background: #2e7d32; color: #fff; }
+  .muted { color: #777; font-size: 12px; }
+  ul { list-style: none; padding: 0; margin: 10px 0 0; max-height: 160px; overflow: auto; }
+  li { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-top: 1px solid #eee; }
+  li span.x { cursor: pointer; color: #999; padding: 0 6px; } li span.x:hover { color: #c0392b; }
+  .stats { margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; }
+  .row { display:flex; gap:6px; margin-top:8px; } .row input { flex:1; padding:7px; border:1px solid #ccc; border-radius:6px; }
+  .row button { width:auto; margin:0; padding:7px 10px; background:#333; color:#fff; }
+</style></head>
+<body>
+  <h1>🛡️ Stream Shield</h1>
+  <div class="muted">Current site</div>
+  <div class="site" id="site">…</div>
+  <button id="toggle" hidden></button>
+  <div class="muted" id="hint"></div>
+  <div class="row"><input id="manual" placeholder="add a site, e.g. example.com"><button id="add">Add</button></div>
+  <ul id="list"></ul>
+  <div class="stats">
+    <div>Blocked on this site: <b id="siteCount">0</b></div>
+    <div>Blocked total: <b id="total">0</b></div>
+    <div class="muted" id="last"></div>
+  </div>
+  <script src="popup.js"></script>
+</body></html>
